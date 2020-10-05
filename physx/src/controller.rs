@@ -96,6 +96,9 @@ impl Controller {
     }
 }
 
+unsafe impl Send for Controller {}
+unsafe impl Sync for Controller {}
+
 fn to_extended(vec: &Vec3) -> PxExtendedVec3 {
     PxExtendedVec3 {
         x: vec.x() as f64,
