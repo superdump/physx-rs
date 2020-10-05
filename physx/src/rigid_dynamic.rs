@@ -20,3 +20,6 @@ impl RigidDynamic {
         _self
     }
 }
+
+unsafe impl Send for RigidDynamic {}
+unsafe impl Sync for RigidDynamic {}

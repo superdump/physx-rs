@@ -495,6 +495,9 @@ impl Scene {
     }
 }
 
+unsafe impl Send for Scene {}
+unsafe impl Sync for Scene {}
+
 #[derive(Debug, Clone, Copy, BitFlags)]
 #[repr(u32)]
 pub enum BroadPhaseType {

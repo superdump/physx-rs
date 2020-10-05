@@ -241,3 +241,6 @@ impl Releasable for RigidActor {
         }
     }
 }
+
+unsafe impl Send for RigidActor {}
+unsafe impl Sync for RigidActor {}

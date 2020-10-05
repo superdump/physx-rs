@@ -73,3 +73,6 @@ impl Releasable for Foundation {
         unsafe { PxFoundation_release_mut(self.get_raw_mut()) }
     }
 }
+
+unsafe impl Send for Foundation {}
+unsafe impl Sync for Foundation {}

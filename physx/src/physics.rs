@@ -275,6 +275,9 @@ impl Drop for Physics {
     }
 }
 
+unsafe impl Send for Physics {}
+unsafe impl Sync for Physics {}
+
 pub struct PhysicsBuilder {
     enable_pvd: bool,
     load_extensions: bool,
