@@ -60,7 +60,7 @@ fn main() {
             // RigidActor-type so we can use the unchecked API
             unsafe { scene.get_rigid_actor_unchecked(&sphere_handle) }
                 .get_global_position()
-                .y() as i32
+                .y as i32
                 - 10
         })
         .collect::<Vec<_>>();
